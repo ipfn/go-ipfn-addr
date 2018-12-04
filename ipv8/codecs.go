@@ -19,25 +19,22 @@ import (
 )
 
 const (
-	// BinaryCellV1 - Content ID of Binary Cell Version 1.
-	BinaryCellV1 = 0x25ff2
-	// FunctionV1 - Content ID of Public Kt Version 1.
-	FunctionV1 = 0x70bc
-	// IdentityV1 - Content ID of IPFN Identity Version 1.
-	// It can contain a multihash cryptographic digest or ed25519 public key contents itself.
-	IdentityV1 = 0x60ac
+	// CodeIdentityV1 - Content ID of IPFN Identity Version 1.
+	// It is a standard used in IPFS and libp2p libraries.
+	// Multihash digest contents is a ed25519 public key.
+	CodeIdentityV1 = 0xed
+
+	// CodeBinaryCellV1 - Content ID of IPFN Binary Cell Version 1.
+	CodeBinaryCellV1 = 0x25ff2
+
+	// CodeFunctionV1 - Content ID of IPFN Function Version 1.
+	CodeFunctionV1 = 0x1007f7
 )
 
 func init() {
 	codecs.Register(map[string]uint64{
-		"ipfn-cell-v1":     BinaryCellV1,
-		"ipfn-func-v1":     FunctionV1,
-		"ipfn-identity-v1": IdentityV1,
+		"ipfn-cell-v1":     CodeBinaryCellV1,
+		"ipfn-func-v1":     CodeFunctionV1,
+		"ipfn-identity-v1": CodeIdentityV1,
 	})
 }
-
-// Protocol reservation:
-// const (
-// 	// FunctionV2 - Content ID of Public Kt Version 1. (name = "ipfn-func-v2", id = 45244)
-// 	FunctionV2 = 0xb0bc
-// )

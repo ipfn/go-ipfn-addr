@@ -12,7 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-// Package ipv8 implements helpers for generating public-key CID.
 package ipv8
 
 import (
@@ -31,8 +30,8 @@ func TestIdentityV1(t *testing.T) {
 	pk, _ := hex.DecodeString("4652486ebc271520d844e5bdda9ac243c05dcbe7bc9b93807073a32177a6f73d")
 	c, err := PrefixIdentityV1.Sum(pk)
 	assert.NoError(t, err)
-	assert.Equal(t, "zFNScXjsiATFzu45Xo9vYezYEcF8n11ytkyCa4rZkzX3QuZ4Yjfr", c.String())
-	assert.Equal(t, "0xkvz0b0ypq9yjqwhsn32bxcbnjmmk56cfpu0hwtu77fhyu0wpe6xbth5mmn6qc", base32i.CheckEncodeToString(c.Bytes()))
+	assert.Equal(t, "z4k889HeEVsMVFxdtVB3SE4uzAf2z6LD7aoLf1mxVqdFokG1cXv", c.String())
+	assert.Equal(t, "08ksz0p0befysm4uyu2jpkzyuk7a4xkzbd09mjl8hjre80qsww3jzaax7u7sc", base32i.CheckEncodeToString(c.Bytes()))
 
 	// Less important...
 	pcid, err := cid.Decode(c.String())
@@ -44,25 +43,6 @@ func TestIdentityV1(t *testing.T) {
 	assert.Equal(t, PrefixIdentityV1.MhType, h.Code)
 	assert.Equal(t, PrefixIdentityV1.MhLength, h.Length)
 	assert.Equal(t, pk, h.Digest)
-}
-
-func TestIdentityHashV1(t *testing.T) {
-	pk, _ := hex.DecodeString("4652486ebc271520d844e5bdda9ac243c05dcbe7bc9b93807073a32177a6f73d")
-	c, err := PrefixIdentityHashV1.Sum(pk)
-	assert.NoError(t, err)
-	assert.Equal(t, "z5pwkYgEhukNP1aHsUe6PRExPPuBN8eHmLp2QYJVnYRmrAfFNJx7GBE", c.String())
-	assert.Equal(t, "0xkvz0r0uspz0t2pfexlcs9f27e0vv8vu7xvhmdqquhb59pretbxq77v8j99sm9ryu", base32i.CheckEncodeToString(c.Bytes()))
-
-	// Less important...
-	pcid, err := cid.Decode(c.String())
-	assert.NoError(t, err)
-	assert.Equal(t, PrefixIdentityHashV1.Codec, pcid.Type())
-	assert.Equal(t, PrefixIdentityHashV1.Version, pcid.Version())
-	assert.Equal(t, c.String(), pcid.String())
-	h, _ := mh.Decode(pcid.Hash())
-	assert.Equal(t, PrefixIdentityHashV1.MhType, h.Code)
-	assert.Equal(t, PrefixIdentityHashV1.MhLength, h.Length)
-	assert.NotEqual(t, pk, h.Digest)
 }
 
 func TestCellHTTPGet(t *testing.T) {
