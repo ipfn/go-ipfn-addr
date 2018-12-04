@@ -3,7 +3,9 @@
   "bugs": {
     "url": "https://github.com/ipfn/go-ipfn-addr/issues/new"
   },
-  "gx": {},
+  "gx": {
+    "dvcsimport": "github.com/ipfn/go-ipfn-addr"
+  },
   "gxDependencies": [
     {
       "author": "whyrusleeping",
@@ -17,6 +19,6 @@
   "license": "Apache-2.0",
   "name": "go-ipfn-addr",
   "releaseCmd": "git commit -a -m \"chore(gx): gx publish $VERSION\"",
-  "version": "0.2.0"
+  "version": "0.2.1"
 }
 
