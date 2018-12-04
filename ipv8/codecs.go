@@ -19,11 +19,11 @@ import (
 )
 
 const (
-	// BinaryCellV1 - Content ID of Binary Cell Version 1. (name = "ipfn-cell-v1", id = 466543)
-	BinaryCellV1 = 0x71e6f
-	// FunctionV1 - Content ID of Public Kt Version 1. (name = "ipfn-func-v1", id = 28860)
+	// BinaryCellV1 - Content ID of Binary Cell Version 1.
+	BinaryCellV1 = 0x25ff2
+	// FunctionV1 - Content ID of Public Kt Version 1.
 	FunctionV1 = 0x70bc
-	// IdentityV1 - Content ID of IPFN Identity Version 1. (name = "ipfn-identity-v1", id = 24748)
+	// IdentityV1 - Content ID of IPFN Identity Version 1.
 	// It can contain a multihash cryptographic digest or ed25519 public key contents itself.
 	IdentityV1 = 0x60ac
 )
