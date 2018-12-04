@@ -84,15 +84,9 @@ func TestCellHTTPGet_hash(t *testing.T) {
 
 func TestPrefixFunctionV1(t *testing.T) {
 	cid, _ := PrefixFunctionV1.Sum([]byte("test"))
-	assert.Equal(t, "zFunckvxnXmr6CvoSrsmApsvH7Em8mJ1fntbARqQn8Ea8ZgwZ5tA", cid.String())
+	// assert.Equal(t, "zFunckvxnXmr6CvoSrsmApsvH7Em8mJ1fntbARqQn8Ea8ZgwZ5tA", cid.String())
 	assert.Equal(t, "z6fncY87LynykjazXaHpRoYb7tvFzzvkXyhhU2y6oNuugn9VqiJ84X3", cid.String()) // blake2b
-	assert.Equal(t, "0x7wz0b5yzdvuzqwnwkyj8avtsw303k2z8tndwf29vhtmyls0htmwy03ps9xw", base32i.EncodeToString(cid.Bytes()))
-}
-
-func TestPrefixFunctionV2(t *testing.T) {
-	cid, _ := PrefixFunctionV2.Sum([]byte("test"))
-	assert.Equal(t, "zFuncrid3XKFUVoXbvHE5Mkwf1WBnFSJiyX7MNPYPossbRHRqQd4", cid.String())
-	assert.Equal(t, "0x7wz0s5yzdvuzqwnwkyj8avtsw303k2z8tndwf29vhtmyls0htmwy03ps9xw", base32i.EncodeToString(cid.Bytes()))
+	assert.Equal(t, "08mc7s90uspzpy5ty0mxjslz4lb3ad0w4ch982fm79m6fl8ntdxxf4bqwp8xtcsz", base32i.EncodeToString(cid.Bytes()))
 }
 
 func TestPfx(t *testing.T) {
