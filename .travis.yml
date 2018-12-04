@@ -12,6 +12,7 @@ install:
  - go get -u github.com/whyrusleeping/gx-go
  - gx install --global
  - go get ./...
+ - go get -u github.com/ipfn/go-base32i/base32i
 
 script:
  - diff -au <(goformat -s -d ./...) <(printf "")
