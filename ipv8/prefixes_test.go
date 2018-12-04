@@ -34,18 +34,19 @@ func TestIdentityV1(t *testing.T) {
 func TestCellHTTPGet(t *testing.T) {
 	body, _ := base32i.DecodeString("psx0yzn8rahkwmq99e3k7mb")
 	cid, _ := PrefixBinaryCellV1.Sum(body)
-	assert.Equal(t, "z2aJkGxYsJTPVFJMbh5fNV2RxzrQ", cid.String())
-	assert.Equal(t, "08et7zb0pcx0c0s2vahk7emvv5hxxmmrpc", base32i.CheckEncodeToString(cid.Bytes()))
+	assert.Equal(t, "z2ceLLU67MxkSCRZ7nnfso5jcAA8", cid.String())
+	assert.Equal(t, "08lcb0s0pcx0c0s2vahk7emvv5hxxmmrpc", base32i.CheckEncodeToString(cid.Bytes()))
 }
 
 func TestCellHTTPGet_hash(t *testing.T) {
 	body, _ := base32i.DecodeString("psx0yzn8rahkwmq99e3k7mb")
 	cid, _ := PrefixBinaryCellHashV1.Sum(body)
 	assert.Equal(t, "z6ceLLNmpHqWREov94EFz2Hwh7AQ2dhAGG8VyhThbaWy81AAz5ZPWyY", cid.String())
+	assert.Equal(t, "08et7zr0uspz0ua52chtrtc7km7ah5z89wxhyta86pnn5kc0ml7ef3jr897rfkvnp0", base32i.CheckEncodeToString(cid.Bytes()))
 }
 
-func TestPrefixFunctionV1(t *testing.T) {
-	cid, _ := PrefixFunctionV1.Sum([]byte("test"))
-	assert.Equal(t, "z6fncY87LynykjazXaHpRoYb7tvFzzvkXyhhU2y6oNuugn9VqiJ84X3", cid.String())
-	assert.Equal(t, "08mc7s90uspzpy5ty0mxjslz4lb3ad0w4ch982fm79m6fl8ntdxxf4bqwp8xtcsz0v", base32i.CheckEncodeToString(cid.Bytes()))
+func TestPrefixBinaryCellHashV1(t *testing.T) {
+	cid, _ := PrefixBinaryCellHashV1.Sum([]byte("test"))
+	assert.Equal(t, "z6ceLLNmpHqYVd12b8xhDeBqEhu4LDPnEBkyvRVokJSgVEuGtSbwp5F", cid.String())
+	// assert.Equal(t, "z6fncY87LynykjazXaHpRoYb7tvFzzvkXyhhU2y6oNuugn9VqiJ84X3", cid.String())	// 0x1007f7
 }

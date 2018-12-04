@@ -25,16 +25,16 @@ const (
 	CodeIdentityV1 = 0xed
 
 	// CodeBinaryCellV1 - Content ID of IPFN Binary Cell Version 1.
-	CodeBinaryCellV1 = 0x25ff2
+	CodeBinaryCellV1 = 33407
 
-	// CodeFunctionV1 - Content ID of IPFN Function Version 1.
-	CodeFunctionV1 = 0x1007f7
+	// CodeBinaryCellHashV1 - Content ID of IPFN Function Version 1.
+	CodeBinaryCellHashV1 = 0x25ff2
 )
 
 func init() {
 	codecs.Register(map[string]uint64{
-		"ipfn-cell-v1":     CodeBinaryCellV1,
-		"ipfn-func-v1":     CodeFunctionV1,
-		"ipfn-identity-v1": CodeIdentityV1,
+		"ipfn-cell-v1":      CodeBinaryCellV1,
+		"ipfn-cell-hash-v1": CodeBinaryCellHashV1,
+		"ipfn-identity-v1":  CodeIdentityV1,
 	})
 }

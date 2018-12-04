@@ -26,18 +26,10 @@ var PrefixBinaryCellV1 = cid.Prefix{
 	MhLength: -1,
 }
 
-// PrefixBinaryCellHashV1 - Binary cell byte code CID prefix.
+// PrefixBinaryCellHashV1 - Function address V1 CID prefix.
 var PrefixBinaryCellHashV1 = cid.Prefix{
 	Version:  1,
-	Codec:    CodeBinaryCellV1,
-	MhType:   0xb220, // blake2b 256 bits
-	MhLength: 32,
-}
-
-// PrefixFunctionV1 - Function address V1 CID prefix.
-var PrefixFunctionV1 = cid.Prefix{
-	Version:  1,
-	Codec:    CodeFunctionV1,
+	Codec:    CodeBinaryCellHashV1,
 	MhType:   0xb220, // blake2b 256 bits
 	MhLength: 32,
 }
