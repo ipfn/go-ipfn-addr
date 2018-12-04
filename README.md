@@ -44,3 +44,5 @@ This source code is part of [IPFN](https://github.com/ipfn) – interplanetary f
 [multihash]:  https://github.com/multiformats/multihash
 [ipv8]: https://github.com/ipfn/go-ipfn-addr/
 [hash-code]: https://github.com/multiformats/multicodec/blob/master/table.csv
+[ed25519]: https://ed25519.cr.yp.to/
+[blake2b]: https://blake2.net/
