@@ -11,7 +11,7 @@ install:
  - go get -u github.com/whyrusleeping/gx
  - go get -u github.com/whyrusleeping/gx-go
  - gx install --global
- - go get -u ./...
+ - go get ./...
 
 script:
  - diff -au <(goformat -s -d ./...) <(printf "")
