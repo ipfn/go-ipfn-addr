@@ -14,7 +14,7 @@ IPv8™ - don't take it too seriously it's just a [content ID][cid].
 ## Standards
 
 * [ed25519][] - Cryptographic Identity Public Keys
-* [blake2b][] - Cryptographic Hashing of Identity Keys
+* [blake2b][] - Cryptographic Hashing of Contents
 
 Content IDs contain [multihashes][multihash].
 
