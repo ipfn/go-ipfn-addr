@@ -1,0 +1,21 @@
+{
+  "author": "IPFN Developers <dev@ipfn.io>",
+  "bugs": {
+    "url": "https://github.com/ipfn/go-ipfn-addr/issues/new"
+  },
+  "gx": {},
+  "gxDependencies": [
+    {
+      "author": "whyrusleeping",
+      "hash": "QmR8BauakNcBa3RbE4nbQu76PDiJgoQgz8AJdhJuiU4TAw",
+      "name": "go-cid",
+      "version": "0.9.1"
+    }
+  ],
+  "gxVersion": "0.14.0",
+  "language": "go",
+  "license": "Apache-2.0",
+  "name": "go-ipfn-addr",
+  "releaseCmd": "git commit -a -m \"gx publish $VERSION\"",
+  "version": "0.0.0"
+}
