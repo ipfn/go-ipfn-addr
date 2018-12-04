@@ -40,13 +40,13 @@ func TestCellHTTPGet(t *testing.T) {
 
 func TestCellHTTPGet_hash(t *testing.T) {
 	body, _ := base32i.DecodeString("psx0yzn8rahkwmq99e3k7mb")
-	cid, _ := PrefixBinaryCellHashV1.Sum(body)
+	cid, _ := PrefixCellHashV1.Sum(body)
 	assert.Equal(t, "z6ceLLNmpHqWREov94EFz2Hwh7AQ2dhAGG8VyhThbaWy81AAz5ZPWyY", cid.String())
 	assert.Equal(t, "08et7zr0uspz0ua52chtrtc7km7ah5z89wxhyta86pnn5kc0ml7ef3jr897rfkvnp0", base32i.CheckEncodeToString(cid.Bytes()))
 }
 
-func TestPrefixBinaryCellHashV1(t *testing.T) {
-	cid, _ := PrefixBinaryCellHashV1.Sum([]byte("test"))
+func TestPrefixCellHashV1(t *testing.T) {
+	cid, _ := PrefixCellHashV1.Sum([]byte("test"))
 	assert.Equal(t, "z6ceLLNmpHqYVd12b8xhDeBqEhu4LDPnEBkyvRVokJSgVEuGtSbwp5F", cid.String())
 	// assert.Equal(t, "z6fncY87LynykjazXaHpRoYb7tvFzzvkXyhhU2y6oNuugn9VqiJ84X3", cid.String())	// 0x1007f7
 }

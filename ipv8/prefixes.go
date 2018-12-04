@@ -26,8 +26,8 @@ var PrefixBinaryCellV1 = cid.Prefix{
 	MhLength: -1,
 }
 
-// PrefixBinaryCellHashV1 - Function address V1 CID prefix.
-var PrefixBinaryCellHashV1 = cid.Prefix{
+// PrefixCellHashV1 - Function address V1 CID prefix.
+var PrefixCellHashV1 = cid.Prefix{
 	Version:  1,
 	Codec:    CodeBinaryCellHashV1,
 	MhType:   0xb220, // blake2b 256 bits
