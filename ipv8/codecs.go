@@ -33,8 +33,8 @@ const (
 
 func init() {
 	codecs.Register(map[string]uint64{
+		"ed25519-pub":       CodeIdentityV1,
 		"ipfn-cell-v1":      CodeBinaryCellV1,
 		"ipfn-cell-hash-v1": CodeBinaryCellHashV1,
-		"ipfn-identity-v1":  CodeIdentityV1,
 	})
 }
